@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <script src="{% static 'resize.js' %}"></script>
+    </head>
+    <body onload="init('text');">
+        <form action="." method="post">
+            {% csrf_token %}
+            <textarea name="text" id="text" cols="150" rows="30"></textarea>
+            <input type="submit" value="OK">
+        </form>
+    </body>
+</html>

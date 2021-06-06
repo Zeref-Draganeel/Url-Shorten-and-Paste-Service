@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <form action="." method="post">
+            {% csrf_token %}
+            <label>Your url: </label>
+            <input name="url">
+            <input name="id" hidden value="{{ id }}">
+            <input type="submit" value="OK">
+        </form>
+        {% if url %}
+        <label id="text">Your shortened url: <a href="{{ url }}">{{ url }}</a></label>
+        {% endif %}
+    </body>
+</html>
